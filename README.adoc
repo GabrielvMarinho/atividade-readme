@@ -1,1 +1,137 @@
+= SISTEMA DE GERENCIAMENTO DE BIBLIOTECA
 
+== SOBRE O PROJETO
+
+O Sistema de Gerenciamento de Biblioteca foi desenvolvido para facilitar todos os processos físicos que envolvem a biblioteca, visando aumentar a produtividade, manter um registro inalterável e inquestionável e ultimamente melhorar a experíência do usuário.
+
+== FUNCIONALIDADE
+Através da aplicação, é possível gerenciar:
+
+==== USUÁRIOS
+* Cadastro, modificação e visualização
+
+==== LIVROS
+* Cadastro (título, auto, ISBN), modificação e visualização
+
+==== EMPRÉSTIMO
+* Cadastro, modificação e visualização
+
+==== GERAÇÃO DE RELATÓRIOS
+* Empréstimos, Devoluções, Multas
+
+==== NOTIFICAÇÕES
+* Avisos de empréstimos e devoluções
+
+==== AUTENTICAÇÃO
+* Gerenciar login de usuários
+
+
+== TECNOLOGIAS UTILIZADAS
+
+=== Frontend
+Angular: Framework Javascript para o desenvolvimento da UI permitindo uma aplicação interativa e responsiva
+
+=== Backend
+Spring Boot: Framework Java utilizado para o desenvolvimento da API que gerencia o CRUD
+
+=== Banco de dados
+MySql: Banco de dados relacional utilizado para armazenar informações pertinentes como empréstimos e usuários
+
+=== Autenticação
+JWT: Utilizado para garantir segurança no processo de autenticação de usuários
+
+== COMO EXECUTAR
+1 -  Clone o repositório
+
+[source, java]
+----
+git clone https://github.com/usuario/sistema-biblioteca.git
+----
+
+2 - Instale as dependências do Frontend
+
+[source, java]
+----
+cd sistema-biblioteca/frontend
+npm install
+----
+
+3 - Instale as dependências do Backend
+
+[source, java]
+----
+cd sistema-biblioteca/backend
+mvn install
+----
+
+4 - Configuração do Banco de dados
+Crie um banco de dados mysql e configure essas credencias no application.properties do Backend
+[source, java]
+----
+spring.datasource.url=jdbc:mysql://localhost:3306/biblioteca
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+----
+
+5 - Inicie o servidor
+[source, java]
+----
+mvn spring-boot:run
+----
+
+6 - Inicie o servidor Frontend
+[source, java]
+----
+ng serve
+----
+
+7 - Acesse a aplicação na URL: http://localhost:4200
+
+
+== DOCUMENTAÇÃO DA API
+A API do Sistema de Gerenciamento de Biblioteca foi documentada
+utilizando Swagger. Abaixo estão alguns dos endpoints principais:
+
+* GET /api/books: Retorna todos os livros disponíveis.
+* POST /api/loans: Cria um novo empréstimo de livro.
+* GET /api/loans/{id}: Obtém os detalhes de um empréstimo específico
+* PUT /api/loans/{id}: Atualiza informações de um empréstimo
+* DELETE /api/loans/{id}: Cancela um empréstimo
+
+Para acessar a documentação completa da API do Swagger, inicie o servidor e acesse:
+
+[source, java]
+----
+http://localhost:8080/swagger-ui.html
+----
+
+== Contribuindo
+1 - Faça um fork
+
+2 - Crie uma nova branch 
+[source, java]
+----
+git checkout -b feature-nome-da-feature
+----
+3 - Faça as alterações e commit 
+[source, java]
+----
+git commit -am 'Adiciona nova feature'
+----
+4 - Envie para o repositório original
+[source, java]
+----
+git push origin feature-nome-da-feature
+----
+5 - Abra um pull request descrevendo as mudanças feitas
+
+== Licença
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para
+mais detalhes.
+
+== Contato 
+Se você tiver alguma dúvida ou sugestão, entre em contato com a equipe de
+desenvolvimento:
+
+* Email: contato@biblioteca.com
+* Telefone: +55 11 98765-4321
